@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margarette Dela Rosa - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: linear-gradient(to right, #bfd7ed, #60a3d9); /* Gradient from Baby Blue to Blue Grotto */
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: white;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        header {
+            background: linear-gradient(to right, #bfd7ed, #60a3d9); /* Gradient from Baby Blue to Blue Grotto */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .intro h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .intro h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .intro button {
+            background: linear-gradient(to right, #0074b7, #003b73); /* Gradient from Royal Blue to Navy Blue */
+            border: none;
+            padding: 15px 25px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            color: white;
+        }
+
+        .intro button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact {
+            background: linear-gradient(to right, #bfd7ed, #60a3d9); /* Gradient from Baby Blue to Blue Grotto */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            margin: 5px 0;
+        }
+
+        .contact a {
+            color: #0074b7;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .intro h1 {
+                font-size: 2em;
+            }
+
+            .intro h2 {
+                font-size: 1.5em;
+            }
+
+            .intro p {
+                font-size: 1em;
+            }
+
+            .intro button {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .contact {
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .intro h1 {
+                font-size: 1.5em;
+            }
+
+            .intro h2 {
+                font-size: 1.2em;
+            }
+
+            .intro p {
+                font-size: 0.9em;
+            }
+
+            .contact p {
+                font-size: 0.9em;
+            }
+
+            .contact a {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+        </header>
+        <section class="intro">
+            <h1>Hi, I'm Margarette Dela Rosa</h1>
+            <h2>Student</h2>
+            <p>Happiness is not about getting all you want, It is about enjoying all you have</p>
+            <!-- You can add buttons or any other elements you want here -->
+        </section>
+        <div id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>Email: delarosamaragrette7@gmail.com</p>
+           <p> Fb : marga malabanan</p>
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
