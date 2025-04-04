@@ -1,210 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Margarette Dela Rosa - Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Margarette Dela Rosa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #bfd7ed, #60a3d9);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: row;
-        }
+    .about-img {
+      max-width: 300px;
+      border-radius: 15px;
+    }
 
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background: linear-gradient(to right, #bfd7ed, #60a3d9); /* Gradient from Baby Blue to Blue Grotto */
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            color: white;
-        }
+    .about-text {
+      flex: 1;
+    }
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
+    .social-icons i {
+      font-size: 1.5rem;
+      margin-right: 15px;
+      color: #000;
+    }
 
-        .sidebar ul li {
-            margin: 20px 0;
-        }
+    .social-icons i:hover {
+      color: #3a6ea5;
+    }
 
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
+    .custom-card {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      margin-top: 20px;
+    }
 
-        /* Main content */
-        .main-content {
-            margin-left: 250px;
-            padding: 20px;
-            flex-grow: 1;
-        }
+    .custom-btn {
+      background-color: #3a6ea5;
+      color: white;
+      border-radius: 8px;
+    }
 
-        header {
-            background: linear-gradient(to right, #bfd7ed, #60a3d9); /* Gradient from Baby Blue to Blue Grotto */
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .intro {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .intro h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .intro h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-
-        .intro p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .intro button {
-            background: linear-gradient(to right, #0074b7, #003b73); /* Gradient from Royal Blue to Navy Blue */
-            border: none;
-            padding: 15px 25px;
-            margin: 10px;
-            cursor: pointer;
-            font-size: 1em;
-            color: white;
-        }
-
-        .intro button a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .contact {
-            background: linear-gradient(to right, #bfd7ed, #60a3d9); /* Gradient from Baby Blue to Blue Grotto */
-            padding: 20px;
-            text-align: center;
-        }
-
-        .contact h2 {
-            margin-bottom: 15px;
-        }
-
-        .contact p {
-            margin: 5px 0;
-        }
-
-        .contact a {
-            color: #0074b7;
-        }
-
-        @media screen and (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-
-            .main-content {
-                margin-left: 0;
-            }
-
-            .intro h1 {
-                font-size: 2em;
-            }
-
-            .intro h2 {
-                font-size: 1.5em;
-            }
-
-            .intro p {
-                font-size: 1em;
-            }
-
-            .intro button {
-                width: 100%;
-                margin: 10px 0;
-            }
-
-            .contact {
-                padding: 15px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .intro h1 {
-                font-size: 1.5em;
-            }
-
-            .intro h2 {
-                font-size: 1.2em;
-            }
-
-            .intro p {
-                font-size: 0.9em;
-            }
-
-            .contact p {
-                font-size: 0.9em;
-            }
-
-            .contact a {
-                font-size: 0.9em;
-            }
-        }
-    </style>
+    .custom-btn:hover {
+      background-color: #2d5983;
+    }
+  </style>
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Margarette</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Main content -->
-    <div class="main-content">
-        <header>
-            <h1>Welcome to My Portfolio</h1>
-        </header>
-        <section class="intro">
-            <h1>Hi, I'm Margarette Dela Rosa</h1>
-            <h2>Student</h2>
-            <p>Happiness is not about getting all you want, It is about enjoying all you have</p>
-            <!-- You can add buttons or any other elements you want here -->
-        </section>
-        <div id="contact" class="contact">
-            <h2>Contact Me</h2>
-            <p>Email: delarosamaragrette7@gmail.com</p>
-           <p> Fb : marga malabanan</p>
-            
+  <!-- Intro Section -->
+  <div class="row">
+    <div class="col text-left my-4">
+      <h1 style="font-size: 4.5rem; font-style: oblique; font-weight: bold;">Hi, I'm Margarette!</h1>
+      <h2 style="font-size: 2.5rem;">Student</h2>
+      <p style="font-size: 2rem; font-weight: 300;">Happiness is not about getting all you want, it is about enjoying all you have.</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container about-container">
+      <img src="c:/Users/840G3/Pictures/visual studio/marga (2).jfif" alt="Margarette" class="about-img">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>At first, it felt like stepping into an unknown world, but then I discovered something surprising: I actually enjoy parts of it.</p>
+        <p>As an observer with a strong intuition, I naturally analyze problems, patterns, and even people. And while I may be quiet, my mind is constantly piecing things together.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <div class="card-body">
+              <h5 class="card-title">A04</h5>
+              <p class="card-text">This is an ongoing project.</p>
+              <a href="#" class="btn custom-btn">View Project</a>
+            </div>
+          </div>
         </div>
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <div class="card-body">
+              <h5 class="card-title">A05</h5>
+              <p class="card-text">This is an ongoing project.</p>
+              <a href="#" class="btn custom-btn">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <div class="card-body">
+              <h5 class="card-title">A06</h5>
+              <p class="card-text">This is an ongoing project.</p>
+              <a href="#" class="btn custom-btn">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </section>
 
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>I’d love to connect! Whether it’s about web development or just tech talk, feel free to reach out.</p>
+      <div class="social-icons">
+        <a href="mailto:delarosamargarette7@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        <a href="https://github.com/margarain" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com/mrgrttdlrs" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
